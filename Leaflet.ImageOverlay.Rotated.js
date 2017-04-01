@@ -104,6 +104,9 @@ L.ImageOverlay.Rotated = L.ImageOverlay.extend({
 
 
 	_reset: function () {
+		if (!this._map) {
+			return;
+		}
 		var div = this._image;
 
 		// Project control points to container-pixel coordinates
